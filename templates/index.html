@@ -1,0 +1,97 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ musician.name }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'DotGothic16', sans-serif;
+            overflow: hidden; /* Скрываем вертикальный и горизонтальный скролл */
+        }
+
+        /* Обертка для видео с абсолютным позиционированием */
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Размещаем за текстом */
+        }
+
+        /* Стили для видео */
+        video {
+            object-fit: cover; /* Заполняем всю область видео */
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .custom-colored-h1
+        {
+            color: #AF3535;
+        }
+        .footer
+        {
+
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <!-- Замените "video.mp4" на путь к вашему видеофайлу -->
+        <video autoplay loop muted>
+            <source src="static/Overlay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <h1 class="custom-colored-h1">{{ musician.name }}</h1>
+    <p>{{ musician.bio }}</p>
+    <ul>
+        <h2>Social links</h2>
+        <li><a href="{{ musician.social_links.Spotify }}">Spotify</a></li>
+        <li><a href="{{ musician.social_links.Twitter }}">Twitter</a></li>
+        <li><a href="{{ musician.social_links.Instagram }}">Instagram</a></li>
+    </ul>
+     <div class="footer">
+       Mxrngate@gmail.com
+     </div>
+</body>
+</html>
