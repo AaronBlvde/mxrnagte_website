@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+app.static_folder = 'static'
 
 # Данные о музыканте (замените на свои данные)
 musician = {
@@ -19,3 +20,5 @@ def index():
     return render_template('index.html', musician=musician)
 
 
+if __name__ == "__main__":
+    app.run()

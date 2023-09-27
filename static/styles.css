@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'DotGothic16', sans-serif;
+    overflow: hidden; /* Скрываем вертикальный и горизонтальный скролл */
+    position: relative; /* Добавляем относительное позиционирование */
+}
+
+/* Обертка для видео с абсолютным позиционированием и z-index: -1; */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.content {
+    position: relative; /* Добавляем относительное позиционирование для контента */
+    z-index: 1; /* Устанавливаем более высокий z-index, чтобы контент был над видео */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.custom-colored-h1 {
+    color: #AF3535;
+}
+
+.footer {
+
+}
