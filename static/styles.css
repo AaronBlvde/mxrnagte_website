@@ -37,12 +37,12 @@ body {
 }
 
 .content {
-    position: relative; /* Добавляем относительное позиционирование для контента */
+    position: center; /* Добавляем относительное позиционирование для контента */
     z-index: 1; /* Устанавливаем более высокий z-index, чтобы контент был над видео */
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
@@ -70,5 +70,8 @@ a {
 }
 
 .footer {
-
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }

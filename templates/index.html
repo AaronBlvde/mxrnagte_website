@@ -20,6 +20,16 @@
     <div class="content">
         <h1 class="custom-colored-h1">{{ musician.name }}</h1>
         <p>{{ musician.bio }}</p>
+        <!-- Встроенное видео из YouTube -->
+        <div class="youtube-video-container">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/uHoQbeN253M?si=ex8NTWM1T_O-K_ms"
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+        </div>
         <ul>
             <h2>Social links</h2>
             <li><a href="{{ musician.social_links.Spotify }}">Spotify</a></li>
