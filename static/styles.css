@@ -1,3 +1,4 @@
+/* Основные стили */
 body {
     margin: 0;
     padding: 0;
@@ -10,10 +11,9 @@ body {
     height: 100vh;
     font-family: 'DotGothic16', sans-serif;
     overflow: hidden; /* Скрываем вертикальный и горизонтальный скролл */
-    position: relative; /* Добавляем относительное позиционирование */
+    position: relative;
 }
 
-/* Обертка для видео с абсолютным позиционированием и z-index: -1; */
 .video-container {
     position: fixed;
     top: 0;
@@ -37,12 +37,12 @@ body {
 }
 
 .content {
-    position: center; /* Добавляем относительное позиционирование для контента */
-    z-index: 1; /* Устанавливаем более высокий z-index, чтобы контент был над видео */
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
@@ -74,4 +74,19 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 28px; /* Уменьшаем размер заголовка для мобильных устройств */
+    }
+
+    p {
+        font-size: 18px; /* Уменьшаем размер текста для мобильных устройств */
+    }
+
+    ul {
+        font-size: 18px; /* Уменьшаем размер шрифта списка для мобильных устройств */
+    }
 }
