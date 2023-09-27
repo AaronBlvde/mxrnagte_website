@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Данные о музыканте (замените на свои данные)
 musician = {
-    'name': 'MxrnGate666',
+    'name': 'MxrnGate',
     'bio': 'Sound Designer',
     'social_links': {
         'Spotify': 'https://open.spotify.com/artist/0pbgDgbEqlMyXDG6iQ0QHf',
