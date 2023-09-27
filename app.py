@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Данные о музыканте (замените на свои данные)
 musician = {
-    'name': 'MxrnGate',
+    'name': 'MxrnGate666',
     'bio': 'Sound Designer',
     'social_links': {
         'Spotify': 'https://open.spotify.com/artist/0pbgDgbEqlMyXDG6iQ0QHf',
@@ -18,5 +18,4 @@ musician = {
 def index():
     return render_template('index.html', musician=musician)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
