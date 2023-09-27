@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <!-- Метаданные -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ musician.name }}</title>
-    <link rel="stylesheet" href="static/styles.css"> <!-- Подключаем внешний файл стилей -->
+
+    <!-- Подключение внешних шрифтов и стилей -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
+    <!-- Видео-контейнер для фонового видео -->
     <div class="video-container">
-        <!-- Замените "video.mp4" на путь к вашему видеофайлу -->
         <video autoplay loop muted>
             <source src="static/Overlay.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+
+    <!-- Основное содержание -->
     <div class="content">
+        <!-- Заголовок -->
         <h1 class="custom-colored-h1">{{ musician.name }}</h1>
+
+        <!-- Биография музыканта -->
         <p>{{ musician.bio }}</p>
+
         <!-- Встроенное видео из YouTube -->
         <div class="youtube-video-container">
             <iframe
@@ -30,12 +39,16 @@
                 allowfullscreen
             ></iframe>
         </div>
+
+        <!-- Социальные ссылки -->
         <ul>
             <h2>Social links</h2>
             <li><a href="{{ musician.social_links.Spotify }}">Spotify</a></li>
             <li><a href="{{ musician.social_links.Twitter }}">Twitter</a></li>
             <li><a href="{{ musician.social_links.Instagram }}">Instagram</a></li>
         </ul>
+
+        <!-- Футер с контактной информацией -->
         <div class="footer">
             Mxrngate@gmail.com
         </div>

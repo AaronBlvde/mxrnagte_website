@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Замените height на min-height для поддержки малых экранов */
     font-family: 'DotGothic16', sans-serif;
     overflow: hidden; /* Скрываем вертикальный и горизонтальный скролл */
     position: relative;
@@ -42,7 +42,7 @@ body {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 20px;
 }
 
@@ -54,26 +54,30 @@ p {
 ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Убираем внешний отступ у списка */
 }
 
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Уменьшаем расстояние между элементами списка */
 }
 
 a {
     text-decoration: none;
     color: #ffffff;
+    margin-bottom: 5px;
+
 }
 
 .custom-colored-h1 {
-    color: #AF3535;
+    color: #FF0000;
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
+    margin-top: 10px;
 }
 
 /* Медиа-запрос для мобильных устройств */
